@@ -1,5 +1,5 @@
-$blue: rgb(129, 175, 190);
-$cream: hsl(20, 50%, 98%);
+$blue: hsl(228, 39%, 23%);
+$cream: hsl(13, 31%, 94%);
 
 body {
     background-color: $cream;
@@ -56,6 +56,7 @@ button {
     border-radius: 20px;
     color: $blue;
     cursor: pointer;
+    font-size: 16px;
 
     &:hover {
         background: $blue;
