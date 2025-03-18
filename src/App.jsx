@@ -1,6 +1,3 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import './App.scss';
 import { useState } from 'react';
 
@@ -17,25 +14,24 @@ function App() {
     }
 
     return (
-        <>
             <div>
                 <h1>Contact Form</h1>
-              <form>
-                  <input type="text" id="name" placeholder="Enter Your Name" value={detail.name} onChange={
+              <form onSubmit={ displayDetails }>
+                  <input type="text" id="name" placeholder="Enter Your Name" required value={detail.name} onChange={
                     e => setDetail(detail => { return {...detail, name: e.target.value} })
                   } />
 
-                  <input type="email" id="email" placeholder="Enter Your Email" value={detail.email} onChange={
+                  <input type="email" id="email" placeholder="Enter Your Email" required value={detail.email} onChange={
                     e => setDetail(detail => { return {...detail, email: e.target.value} })
                   } />
 
-                  <input type="tel" id="tel" placeholder="Enter Your tel" value={detail.tel} onChange={
+                  <input type="tel" id="tel" placeholder="Enter Your Phone No." required value={detail.tel} onChange={
                     e => setDetail(detail => { return {...detail, tel: e.target.value} })
                   } />
+
+                 <input id="submit" type="submit" value="Submit" />
                </form>
-               <button id="submit" onClick={displayDetails}>Submit</button>
             </div>
-        </>
     );
 }
 

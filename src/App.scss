@@ -51,7 +51,7 @@ input {
     }
 }
 
-button {
+#submit {
     @extend input;
     border-radius: 20px;
     color: $blue;
